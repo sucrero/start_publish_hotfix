@@ -1,0 +1,11 @@
+#!/bin/bash
+read -r -p 'Nombre Hotfix: ' hotfix
+echo -e '**********************************'
+echo -e "*** Iniciando hotfix/${hotfix}"
+echo -e '**********************************\n'
+git flow hotfix start "$hotfix"
+
+echo -e '***********************************'
+echo -e "*** Publicando hotfix/${hotfix}"
+echo -e '***********************************\n'
+git flow hotfix publish "$hotfix"
